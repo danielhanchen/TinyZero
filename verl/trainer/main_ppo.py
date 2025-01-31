@@ -15,6 +15,10 @@
 Note that we don't combine the main with ray_trainer as ray_trainer is used by other main.
 """
 
+import os
+print(os.environ["PYTORCH_CUDA_ALLOC_CONF"])
+print(os.environ["HF_HUB_ENABLE_HF_TRANSFER"])
+
 from verl import DataProto
 import torch
 from verl.utils.reward_score import gsm8k, math, multiply, countdown
